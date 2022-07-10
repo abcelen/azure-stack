@@ -1,3 +1,12 @@
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "trial-1"
+    storage_account_name = "saterraform37"
+    container_name       = "terraform"
+    key                  = "first.tfstate"
+  }
+}
+
 provider "azurerm" {
   features {}
 }
